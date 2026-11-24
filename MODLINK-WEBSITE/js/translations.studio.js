@@ -1,0 +1,97 @@
+// MODLINK Studio showcase texts (same central translation object).
+(() => { const I = window.MODLINK_I18N;
+Object.assign(I.en, {
+  nav_software:"MODLINK Studio", sw_h:"MODLINK Studio",
+  sw_p:"MODLINK Studio is the Windows application behind the device. It reads your PC, runs actions and hands the results to the device.",
+  dl_btn:"Download MODLINK Studio", b_dl:"Download MODLINK Studio",
+  studio_sub:"Your desktop. More connected.",
+  studio_h:"What MODLINK Studio does",
+  studio_lead:"MODLINK is more than a small display with a few menus. The device handles operation and display, MODLINK Studio does the PC-specific work: monitoring, process management, media, clipboard, storage and system information.",
+  studio_note:"Mockups for illustration with example values. The status label shows how far each function is.",
+  stu_conn:"Controller connected", stu_ver:"Current MODLINK Studio version: ", stu_fw:"Device firmware: ",
+  stat:{available:"Available", dev:"In Development", planned:"Planned", soon:"Coming Soon"},
+  f2d:"CPU, GPU, RAM and network on the device, with history charts and an optional FPS display.",
+  f4d:"Control playback and volume from the device. MODLINK Studio talks to the Windows media information.",
+  f9:"Clipboard Manager", f9d:"Your clipboard history, always within reach: the last six copied items on the device.",
+  s3d:"PC integration runs through this link: diagnostics, processes, media, clipboard, storage and system information.",
+  sim_demo:"Demo data. Simulation only, no real connection. Analyses run faster than on a real drive. Media and clipboard use demo data.",
+  mk:{hw:"MODLINK Hardware",mod:"Module",conn:"connected",audio:"Audio",act:"Activity",a1:"Device connected",a2:"Diagnostics opened",a3:"Process list updated",cur:"Current FPS",avg:"Average FPS",game:"Game detected",pid:"PID",close:"Close",q:"Close this application?",yes:"Yes",no:"No",devs:"Shown on the device",orig:"Kept in MODLINK Studio",orig2:"Original content",dup:"Duplicates",big:"Large files",open:"Open folder",grp:"Group",exp:"Express",ext:"Extreme",bin:"Empty Recycle Bin",free:"free of",track:"Sample Track",artist:"Sample Artist",dl:"Download",ul:"Upload",tt:"Text"},
+  stu_blocks:{
+   dash:{n:"Studio Dashboard",tag:"Your desktop at a glance",d:"The dashboard brings the device connection, the connected module, audio volume and recent activity into one view.",b:["Connection status of the device","Module and traffic overview","Audio volume at a glance","Activity log"]},
+   diag:{n:"Hardware Diagnostics",tag:"Live performance monitoring",d:"MODLINK Studio reads CPU, GPU and RAM load and your network speed and shows them on the device with small history charts. Updates run about every five seconds and only while Diagnostics is open.",b:["CPU, GPU and RAM in percent","Download and upload in Mbit/s","History charts with up to 12 points","GPU readout depends on the available graphics hardware"]},
+   fps:{n:"FPS Monitoring",tag:"Gaming and performance monitoring",d:"When a suitable application or game is running and usable frame data exists, the device shows the current and the average frame rate at the bottom of the diagnostics. Without a meaningful measurement, nothing is shown.",b:["Current FPS and average FPS","Shown only when valid values exist","Detection is done by MODLINK Studio","Not every game can be measured"]},
+   task:{n:"Task Manager",tag:"Monitor and manage your running applications directly from MODLINK.",d:"The six busiest processes appear on the device, sorted by CPU load. To close one, you confirm on the device first. MODLINK Studio then checks the request and reports the result.",b:["Six processes, highest CPU load first","Refreshed about every five seconds while open","NO is preselected in the confirmation","Studio re-checks the process and protects system processes"]},
+   media:{n:"Media Control",tag:"Control playback from your desk",d:"Title, artist, position, duration and volume come from the Windows media information. Previous, play/pause, next and volume are controlled from the device. Compatibility depends on the media application.",b:["Title, artist and progress","Previous, play/pause, next","Volume in steps of 2 %","Progress keeps running smoothly between updates"]},
+   clip:{n:"Clipboard Manager",tag:"Your clipboard history, always within reach.",d:"MODLINK Studio keeps the last six things you copied. Browse them on the device, confirm, and Studio restores the original and pastes it into the active window. Files get short, readable names such as Image, Word file or PDF file.",b:["Last six items, newest first","Short text preview","Automatic file type names","The original content is kept and restored, not just its name"]},
+   storage:{n:"Storage Management",tag:"Understand your storage at a glance.",d:"All Windows drives at a glance, including USB sticks and SD cards. Start an Express or Extreme analysis, see duplicates and large files, and open their folders in Windows Explorer. MODLINK never deletes anything automatically.",b:["Internal and external drives, updated live","Express and Extreme analysis","Folders open in Windows Explorer","Recycle Bin only after confirmation"]}},
+  stu_clip_h:"How the Clipboard Manager works",
+  stu_clip_steps:["You copy something in Windows","MODLINK Studio keeps the last six items","You browse the list on the device","You confirm the item you want to insert","Studio restores the original and pastes it into the active window"],
+  stu_clip_note:"The device shows only a short name or preview. The full original stays in MODLINK Studio, so inserting a picture gives you the picture, not the word “Image”.",
+  clip_types:"Type names: Image, Word file, PowerPoint file, Excel file, PDF file, Archive file, or simply File for unknown formats.",
+  stu_table_h:"Who does what", stu_cols:["Function","MODLINK Device","MODLINK Studio"],
+  stu_rows:[["System status","Display","Gathers information"],["Hardware diagnostics","Display","Measures values"],["FPS","Display","Determines values"],["Task Manager","Operation","Manages processes"],["Media","Operation","Controls media"],["Clipboard","Shows history","Stores content"],["Storage","Shows drives","Analyzes drives"],["PC time","Display","Provides time"],["System uptime","Display","Provides uptime"],["Settings","Operation","Supporting configuration"]],
+  stu_smart_h:"Active only when needed",
+  stu_smart_p:"Functions transfer data only while they are open. When Diagnostics is closed, no diagnostic data is sent. The same goes for Task Manager, media, storage analyses and clipboard updates.",
+  stu_smart:["On connection problems, updates stop and active tasks end cleanly","Outdated information is not shown as current","Unsafe actions are prevented","After the connection returns, everything starts again cleanly"],
+  dev_h:"On the device", dev_p:"The device shows what matters and adapts to what it knows.",
+  dev_cards:[{n:"Dynamic homescreen",d:"Your desktop information at a glance. Without PC data, the module ID is shown extra large. Once valid system information arrives, the screen switches to a compact view with PC time and system uptime.",s:"sysinfo"},
+   {n:"System information",d:"PC time is synchronized about once an hour. In between, the device keeps counting on its own.",s:"sysinfo"},
+   {n:"Six main areas",d:"Media, Clipboard, Task Manager, Hardware Diagnostics, Storage and Settings as compact tiles with their own icons."},
+   {n:"Nine accent colors",d:"Green, Blue, Cyan, Red, Orange, Purple, Pink, White and Neutral."},
+   {n:"Two encoder modes",d:"Volume mode controls PC volume, Media mode skips tracks. In menus, the encoder always navigates."},
+   {n:"Five themes",d:"Light, Dark, Graphite, Midnight and Colorful. Your choice is saved."},
+   {n:"Screen timeout",d:"From 1 minute up to 10 hours, either only outside menus and apps or everywhere."},
+   {n:"German and English",d:"The whole interface is available in both languages."}]
+});
+Object.assign(I.de, {
+  nav_software:"MODLINK Studio", sw_h:"MODLINK Studio",
+  sw_p:"MODLINK Studio ist die Windows-Anwendung hinter dem Gerät. Sie liest deinen PC aus, führt Aktionen aus und gibt dem Gerät die Ergebnisse.",
+  dl_btn:"MODLINK Studio herunterladen", b_dl:"MODLINK Studio herunterladen",
+  studio_sub:"Dein Desktop. Noch besser vernetzt.",
+  studio_h:"Was MODLINK Studio übernimmt",
+  studio_lead:"MODLINK ist mehr als ein kleines Display mit ein paar Menüs. Das Gerät übernimmt Bedienung und Anzeige, MODLINK Studio erledigt die PC-spezifische Arbeit: Überwachung, Prozessverwaltung, Medien, Zwischenablage, Speicher und Systeminformationen.",
+  studio_note:"Mockups zur Veranschaulichung mit Beispielwerten. Das Status-Label zeigt, wie weit jede Funktion ist.",
+  stu_conn:"Controller verbunden", stu_ver:"Aktuelle MODLINK-Studio-Version: ", stu_fw:"Geräte-Firmware: ",
+  stat:{available:"Verfügbar", dev:"In Entwicklung", planned:"Geplant", soon:"Bald verfügbar"},
+  f2d:"CPU, GPU, RAM und Netzwerk auf dem Gerät, mit Verlaufsdiagrammen und optionaler FPS-Anzeige.",
+  f4d:"Steuere Wiedergabe und Lautstärke am Gerät. MODLINK Studio spricht mit den Windows-Medieninformationen.",
+  f9:"Clipboard Manager", f9d:"Dein Zwischenablageverlauf, jederzeit griffbereit: die letzten sechs kopierten Inhalte auf dem Gerät.",
+  s3d:"Die PC-Integration läuft über diese Verbindung: Diagnose, Prozesse, Medien, Zwischenablage, Speicher und Systeminformationen.",
+  sim_demo:"Demodaten. Nur eine Simulation, keine echte Verbindung. Analysen laufen schneller als auf einem echten Laufwerk. Media und Zwischenablage nutzen Demodaten.",
+  mk:{hw:"MODLINK Hardware",mod:"Modul",conn:"verbunden",audio:"Audio",act:"Aktivität",a1:"Gerät verbunden",a2:"Diagnose geöffnet",a3:"Prozessliste aktualisiert",cur:"Aktuelle FPS",avg:"Durchschnitts-FPS",game:"Spiel erkannt",pid:"PID",close:"Schließen",q:"Diese Anwendung schließen?",yes:"Ja",no:"Nein",devs:"Anzeige auf dem Gerät",orig:"Gespeichert in MODLINK Studio",orig2:"Originalinhalt",dup:"Duplikate",big:"Große Dateien",open:"Ordner öffnen",grp:"Gruppe",exp:"Express",ext:"Extrem",bin:"Papierkorb leeren",free:"frei von",track:"Beispieltitel",artist:"Beispiel-Interpret",dl:"Download",ul:"Upload",tt:"Text"},
+  stu_blocks:{
+   dash:{n:"Studio-Dashboard",tag:"Dein Desktop auf einen Blick",d:"Das Dashboard zeigt Geräteverbindung, angeschlossenes Modul, Audiolautstärke und die letzte Aktivität in einer Ansicht.",b:["Verbindungsstatus des Geräts","Modul- und Datenverkehr-Übersicht","Audiolautstärke auf einen Blick","Aktivitätsprotokoll"]},
+   diag:{n:"Hardware-Diagnose",tag:"Live-Leistungsüberwachung",d:"MODLINK Studio liest CPU-, GPU- und RAM-Auslastung sowie deine Netzwerkgeschwindigkeit aus und zeigt sie mit kleinen Verlaufsdiagrammen auf dem Gerät. Aktualisiert wird etwa alle fünf Sekunden, und nur solange die Diagnose geöffnet ist.",b:["CPU, GPU und RAM in Prozent","Download und Upload in Mbit/s","Verlaufsdiagramme mit bis zu 12 Punkten","Die GPU-Anzeige hängt von der vorhandenen Grafikhardware ab"]},
+   fps:{n:"FPS-Monitoring",tag:"Gaming- und Performance-Überwachung",d:"Läuft eine geeignete Anwendung oder ein Spiel und gibt es verwertbare Bilddaten, zeigt das Gerät ganz unten in der Diagnose die aktuelle und die durchschnittliche Bildrate. Ohne sinnvolle Messung wird nichts angezeigt.",b:["Aktuelle FPS und Durchschnitts-FPS","Nur sichtbar, wenn gültige Werte vorliegen","Die Erkennung übernimmt MODLINK Studio","Nicht jedes Spiel lässt sich messen"]},
+   task:{n:"Task Manager",tag:"Überwache und verwalte deine laufenden Anwendungen direkt über MODLINK.",d:"Die sechs aktivsten Prozesse erscheinen auf dem Gerät, sortiert nach CPU-Auslastung. Zum Beenden bestätigst du zuerst am Gerät. MODLINK Studio prüft die Anforderung und meldet das Ergebnis zurück.",b:["Sechs Prozesse, höchste CPU-Last zuerst","Etwa alle fünf Sekunden aktualisiert, solange geöffnet","NEIN ist in der Abfrage vorausgewählt","Studio prüft den Prozess erneut und schützt Systemprozesse"]},
+   media:{n:"Mediensteuerung",tag:"Steuere die Wiedergabe von deinem Schreibtisch aus",d:"Titel, Interpret, Position, Dauer und Lautstärke kommen aus den Windows-Medieninformationen. Vorheriger Titel, Play/Pause, nächster Titel und Lautstärke steuerst du am Gerät. Die Kompatibilität hängt von der Medienanwendung ab.",b:["Titel, Interpret und Fortschritt","Vorheriger Titel, Play/Pause, nächster Titel","Lautstärke in 2-%-Schritten","Der Fortschritt läuft zwischen Updates flüssig weiter"]},
+   clip:{n:"Clipboard Manager",tag:"Dein Zwischenablageverlauf – jederzeit griffbereit.",d:"MODLINK Studio merkt sich die letzten sechs kopierten Inhalte. Du wählst sie am Gerät aus, bestätigst, und Studio stellt das Original wieder her und fügt es ins aktive Fenster ein. Dateien bekommen kurze, verständliche Namen wie Bild, Word-Datei oder PDF-Datei.",b:["Letzte sechs Einträge, neuester zuerst","Kurze Textvorschau","Automatische Dateityp-Namen","Der Originalinhalt bleibt erhalten und wird wiederhergestellt, nicht nur sein Name"]},
+   storage:{n:"Speicherverwaltung",tag:"Behalte deine Speichergeräte und deren Auslastung jederzeit im Blick.",d:"Alle Windows-Laufwerke auf einen Blick, auch USB-Sticks und SD-Karten. Starte eine Express- oder Extrem-Analyse, sieh Duplikate und große Dateien und öffne deren Ordner im Windows-Explorer. MODLINK löscht nie automatisch.",b:["Interne und externe Laufwerke, live aktualisiert","Express- und Extrem-Analyse","Ordner öffnen sich im Windows-Explorer","Papierkorb nur nach Bestätigung"]}},
+  stu_clip_h:"So funktioniert der Clipboard Manager",
+  stu_clip_steps:["Du kopierst etwas in Windows","MODLINK Studio merkt sich die letzten sechs Einträge","Du blätterst am Gerät durch die Liste","Du bestätigst den Eintrag, der eingefügt werden soll","Studio stellt das Original wieder her und fügt es ins aktive Fenster ein"],
+  stu_clip_note:"Das Gerät zeigt nur einen kurzen Namen oder eine Vorschau. Das vollständige Original bleibt in MODLINK Studio, beim Einfügen eines Bildes bekommst du also das Bild, nicht das Wort „Bild“.",
+  clip_types:"Typnamen: Bild, Word-Datei, PowerPoint-Datei, Excel-Datei, PDF-Datei, Archiv-Datei oder einfach Datei bei unbekannten Formaten.",
+  stu_table_h:"Wer macht was", stu_cols:["Funktion","MODLINK Gerät","MODLINK Studio"],
+  stu_rows:[["Systemstatus","Anzeige","Ermittelt Informationen"],["Hardware-Diagnose","Darstellung","Ermittelt Messwerte"],["FPS","Darstellung","Ermittelt Werte"],["Taskmanager","Bedienung","Verwaltet Prozesse"],["Media","Bedienung","Steuert Medien"],["Zwischenablage","Zeigt den Verlauf","Speichert Inhalte"],["Speicher","Zeigt Laufwerke","Analysiert Laufwerke"],["PC-Uhrzeit","Darstellung","Stellt die Zeit bereit"],["System-Uptime","Darstellung","Stellt die Uptime bereit"],["Einstellungen","Bedienung","Unterstützende Konfiguration"]],
+  stu_smart_h:"Nur aktiv, wenn nötig",
+  stu_smart_p:"Funktionen übertragen nur dann Daten, wenn sie geöffnet sind. Ist die Diagnose geschlossen, werden keine Diagnosedaten gesendet. Dasselbe gilt für Task Manager, Medien, Speicheranalysen und Zwischenablage-Updates.",
+  stu_smart:["Bei Verbindungsproblemen stoppen Updates und aktive Aufgaben enden sauber","Veraltete Informationen werden nicht als aktuell angezeigt","Unsichere Aktionen werden verhindert","Nach der Wiederverbindung startet alles wieder sauber"],
+  dev_h:"Auf dem Gerät", dev_p:"Das Gerät zeigt, was wichtig ist, und passt sich an seinen Informationsstand an.",
+  dev_cards:[{n:"Dynamischer Homescreen",d:"Deine Desktop-Informationen auf einen Blick. Ohne PC-Daten wird die Modul-ID extra groß gezeigt. Sobald gültige Systeminformationen eintreffen, wechselt die Anzeige in eine kompakte Ansicht mit PC-Uhrzeit und System-Uptime.",s:"sysinfo"},
+   {n:"Systeminformationen",d:"Die PC-Zeit wird etwa einmal pro Stunde synchronisiert. Dazwischen zählt das Gerät selbstständig weiter.",s:"sysinfo"},
+   {n:"Sechs Hauptbereiche",d:"Medien, Ablage, Taskmanager, Hardware-Diagnose, Speicher und Einstellungen als kompakte Kacheln mit eigenen Symbolen."},
+   {n:"Neun Akzentfarben",d:"Grün, Blau, Cyan, Rot, Orange, Lila, Pink, Weiß und Neutral."},
+   {n:"Zwei Encoder-Modi",d:"Im Volume Mode steuerst du die PC-Lautstärke, im Media Mode wechselst du Titel. In Menüs navigiert der Encoder immer."},
+   {n:"Fünf Darstellungsmodi",d:"Hell, Dunkel, Graphit, Mitternacht und Farbenfroh. Deine Wahl wird gespeichert."},
+   {n:"Bildschirmtimeout",d:"Von 1 Minute bis 10 Stunden, entweder nur außerhalb von Menüs und Programmen oder überall."},
+   {n:"Deutsch und Englisch",d:"Die gesamte Oberfläche gibt es in beiden Sprachen."}]
+});
+// Communication section: keep in step with the current state
+const medSt = {en:"Available in MODLINK Studio. Compatibility depends on the media application.", de:"In MODLINK Studio verfügbar. Die Kompatibilität hängt von der Medienanwendung ab."};
+const clipTp = {
+ en:{name:"Clipboard",trig:"You open the Clipboard on the device.",from:"Device (request); MODLINK Studio (history)",to:"MODLINK Studio / device",info:"Up to six entries, newest first, each with a short text preview or a file type name.",next:"After you confirm an entry, MODLINK Studio restores the original content and pastes it into the active window.",see:"A short list, a confirmation, then the content appears in your window.",st:"In development",dev:true},
+ de:{name:"Zwischenablage",trig:"Du öffnest die Ablage am Gerät.",from:"Gerät (Anfrage); MODLINK Studio (Verlauf)",to:"MODLINK Studio / Gerät",info:"Bis zu sechs Einträge, neuester zuerst, jeweils mit kurzer Textvorschau oder Dateityp-Namen.",next:"Nach deiner Bestätigung stellt MODLINK Studio den Originalinhalt wieder her und fügt ihn ins aktive Fenster ein.",see:"Eine kurze Liste, eine Bestätigung, dann erscheint der Inhalt in deinem Fenster.",st:"In Entwicklung",dev:true}};
+["en","de"].forEach(l => { const tp = I[l].topics; const m = tp.find(x => /Media|Medien/.test(x.name)); if (m) m.st = medSt[l];
+  const d = tp.find(x => /Diagnos/.test(x.name)); if (d) d.info += l === "en" ? " When a suitable game runs, current and average FPS are added." : " Läuft ein geeignetes Spiel, kommen aktuelle und durchschnittliche FPS dazu.";
+  tp.splice(5,0,clipTp[l]); });
+})();
